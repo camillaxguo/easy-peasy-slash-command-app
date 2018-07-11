@@ -41,11 +41,10 @@
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 /* Uses the slack button feature to offer a real time bot to multiple teams */
-var port = 8000,
-express = require('express'),
-app = express().use(express.static(__dirname + '/')),
-http = require('http').Server(app),
-io = require('socket.io')(http);
+var connect = require('connect');
+var serveStatic = require('serve-static');
+var app = connect(); 
+app.use(serveStatic('../angularjs'),  {default: 'angular.min.js'}); app.listen(8000); 
 
 app.get('/', function(req, res){
     res.sendFile(__dirname + '/index.html');
