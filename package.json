@@ -1,7 +1,7 @@
 {
-  "name": "awesomeslashcommand",
+  "name": "driftyidea",
   "version": "1.0.0",
-  "description": "The awesomest slash command evar.",
+  "description": "submit a feature request",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
