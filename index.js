@@ -117,7 +117,7 @@ controller.on('slash_command', function (slashCommand, message) {
             if (message.text === "" || message.text === "help") {
                 slashCommand.replyPrivate(message,
                     "I echo back what you tell me. " +
-                    "Try typing `/echo hello` to see.");
+                    "Try typing `/driftyidea hello` to see.");
                 return;
             }
 
