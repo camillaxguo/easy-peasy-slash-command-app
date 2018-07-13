@@ -41,6 +41,20 @@
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 /* Uses the slack button feature to offer a real time bot to multiple teams */
+
+
+app.get('/', function(req, res){
+    res.sendFile(__dirname + '/index.html');
+});
+
+io.on('connection', function(socket){
+    console.log('a user connected');
+});
+
+http.listen(port, function(){
+    console.log("Node server listening on port " + port);
+});
+
 var Botkit = require('botkit');
 
 if (!process.env.CLIENT_ID || !process.env.CLIENT_SECRET || !process.env.PORT || !process.env.VERIFICATION_TOKEN) {
